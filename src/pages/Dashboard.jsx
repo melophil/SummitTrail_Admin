@@ -55,10 +55,10 @@ export default function Dashboard() {
 
   useEffect(() => {
     async function load() {
-      const t = await api.get("/treks");
+      const t = await api.get("/api/treks");
       setTreks(t.data);
       try {
-        const b = await api.get("/bookings");
+        const b = await api.get("/api/bookings");
         setBookings(b.data);
       } catch (e) {}
     }
